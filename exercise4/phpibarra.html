@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "My Name is Kim Ibarra.";
+}
+function myFunction2() {
+    document.getElementById("demo").innerHTML = "I study at Asia Pacific College.";
+}
+function myFunction3() {
+    document.getElementById("demo").innerHTML = "I'm 18 years old.";
+}
+function myFunction4() {
+    document.getElementById("demo").innerHTML = "I'm a gamer and I love to play basketball.";
+}
+function myFunction5() {
+    document.getElementById("demo").innerHTML = "I'm a burger lover.";
+}
+</script>
+<style>
+h1 {
+font-size: 30px;
+}
+p.serif {
+font-famili: "Times New Roman", Times, seif;
+}
+p {
+font-size: 35px;
+color: white;
+}
+div {
+    border: 2pxpx solid white;
+    background-color: #F2F3F4;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+body {
+background-image: url("download (5).jpg")
+}
+a {
+color: red;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #000000;
+}
+</style>
+</head>
+<body>
+
+<h1>JAVASCRIPT</h1>
+<p>Welcome to my Home Page.</p>
+
+<div>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Nickname</th>
+    <th>Interest</th>
+<th>Favorite Website</th>
+  </tr>
+  <tr>
+    <td>Kim Ibarra</td>
+    <td>Kim</td>
+<td><img src="download (1).jpg" alt="Basketball" style="width:150px;height:100px;"></td>
+    <td><p><b><a href="www.Ign.com" target="_blank">IGN</a></b></p></td>
+  </tr>
+</table>
+</div>
+
+<h1>Press the buttons below to know more about me.</h1>
+<p id="demo"></p>
+
+<table>
+  <tr>
+    <th>What is my full name?</th>
+    <th>Where do I study?</th>
+    <th>How old I am?</th>
+<th>Interests?</th>
+<th>What is my favorite food?</th>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="myFunction()">PRESS</button></td>
+    <td><button type="button" onclick="myFunction2()">PRESS</button></td>
+<td><button type="button" onclick="myFunction3()">PRESS</button></td>
+    <td><button type="button" onclick="myFunction4()">PRESS</button></td>
+<td><button type="button" onclick="myFunction5()">PRESS</button></td>
+  </tr>
+</table>
+<?php
+// define variables and set to empty values
+$Complete_Name = $Nick_name = $Email_Address = $Home_Address = $Cell_No = "";
+$gender = $Comment =  "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $Complete_Name = "Name is required";
+  } else {
+    $Complete_Name = test_input($_POST["name"]);
+    if (!preg_match("/^[a-zA-Z ]*$/",$Complete_Name)) {
+      $Complete_Name = "Only letters and space allowed"; 
+    }
+  }
+  
+  if (empty($_POST["Nickname"])) {
+    $Nick_name = "Nickname is required";
+  } else {
+    $Nick_name = test_input($_POST["Nickname"]);
+    
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $Email_Address = "Email is required";
+  } else {
+    $Email_Address = test_input($_POST["email"]);
+    
+    if (!filter_var($Email_Address, FILTER_VALIDATE_EMAIL)) {
+      $Email_Address = "Invalid email format"; 
+    }
+  }
+    
+  if (empty($_POST["Cell_No"])) {
+    $Cell_No = "";
+  } else {
+    $Cell_No = test_input($_POST["Cell_No"]);
+  }
+
+  if (empty($_POST["Comment"])) {
+    $Comment = "";
+  } else {
+    $Comment = test_input($_POST["Comment"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+    }
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>Information Fill-Up</h2>
+<p><span class="error">* required field.</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Complete-Name: <input type="text" name="Complete Name" value="<?php echo $Complete_Name;?>">
+  <span class="error">* <?php echo $Complete_Name;?></span>
+  <br><br>
+  
+   Nickname: <input type="text" name="Nickname" value="<?php echo $Nick_name;?>">
+  <span class="error">* <?php echo $Nick_name;?></span>
+  <br><br>
+  
+  E-mail Address: <input type="text" name="E-mail Address" value="<?php echo $Email_Address;?>">
+  <span class="error">* <?php echo $Email_Address;?></span>
+  <br><br>
+  
+   Home_Address: <input type="text" name="Home_Address" value="<?php echo $Home_Address;?>">
+  <span class="error">* <?php echo $Home_Address;?></span>
+  <br><br>
+  
+  Cell No. <input type="number" name="Cell No" value="<?php echo $Cell_No;?>">
+  <span class="error"><?php echo $Cell_No;?></span>
+  <br><br>
+  
+  Comment: <textarea name="Comment" rows="5" cols="40"><?php echo $Comment;?></textarea>
+  <br><br>
+  
+  Gender:
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+  <span class="error">* <?php echo $gender;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo $Complete_Name;
+echo "<br>";
+echo $Nick_name;
+echo "<br>";
+echo $Email_Address;
+echo "<br>";
+echo $Home_Address;
+echo "<br>";
+echo $Cell_No;
+echo "<br>";
+echo $Comment;
+echo "<br>";
+echo $gender;
+?>
+</body>
+</html>
