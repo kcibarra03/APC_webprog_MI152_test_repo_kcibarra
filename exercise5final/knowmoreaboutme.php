@@ -84,9 +84,12 @@ th, td {
 <h1>Want to know more about me?</h1>
 <h2> Click the buttons below<h2>
 <p id="demo"></p>
-<center><a href="index.php" target="_self">Back to main page<a/>
-<center><a href="infomation.php" target="_self">Info<a/>
-<center><a href="knowmoreaboutme.php" target=_self">More Info<a/>
+<center><FORM METHOD="LINK" ACTION="infomation.php">
+<INPUT TYPE="submit" VALUE="More Informations about me!">
+</FORM>
+<center><FORM METHOD="LINK" ACTION="index.php">
+<INPUT TYPE="submit" VALUE="Back to main page">
+</FORM>
 
 <table>
   <tr>

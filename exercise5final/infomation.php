@@ -56,7 +56,9 @@ div {
 }
 
 body {
-background-image: url("download.jpg")
+background-image: url("wews.jpg");
+background-repeat: no-repeat;
+ background-size: 1365px 800px;
 
 }
 
@@ -82,8 +84,12 @@ th, td {
 <h1>WEBPROG</h1>
 <p> My Home Page.</p>
 
-<center><a href="index.php" target="_self">Back to main page<a/>
-<center><a href="infomation.php" target="_self">Info<a/><center>
+<center><FORM METHOD="LINK" ACTION="knowmoreaboutme.php">
+<INPUT TYPE="submit" VALUE="More Informations about me!">
+</FORM>
+<center><FORM METHOD="LINK" ACTION="Back to main pag.php">
+<INPUT TYPE="submit" VALUE="Home">
+</FORM>
 <center><a href="knowmoreaboutme.php" target=_self">More Info<a/>
 
 <table>

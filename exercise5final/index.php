@@ -82,6 +82,7 @@ th, td {
 <center><FORM METHOD="LINK" ACTION="infomation.php">
 <INPUT TYPE="submit" VALUE="Informations">
 </FORM> 
+
 <center><FORM METHOD="LINK" ACTION="knowmoreaboutme.php">
 <INPUT TYPE="submit" VALUE="More Informations about me!">
 </FORM> 
@@ -173,6 +174,8 @@ function delete_id(id)
 
     <table align="center">
     <tr>
+	
+   
 	
 	<center colspan= "20"><FORM METHOD="LINK" ACTION="add_data.php">
 <INPUT TYPE="submit" VALUE="Add data here">
