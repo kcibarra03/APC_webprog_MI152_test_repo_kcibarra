@@ -86,7 +86,7 @@ if(isset($_POST['btn-cancel']))
 	</td>
 	</tr>
 	<tr>
-    <td><input type="number" name="cpnum" placeholder="Cellphone Number" value="<?php echo $fetched_row['cpnum']; ?>" required /></td>
+    <td><input type="number" name="cp_number" placeholder="Cellphone Number" value="<?php echo $fetched_row['cpnum']; ?>" required /></td>
     </tr>
     <tr>
     <td>
