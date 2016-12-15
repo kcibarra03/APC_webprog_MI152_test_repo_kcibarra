@@ -56,8 +56,9 @@ div {
 }
 
 body {
-background-image: url("download.jpg")
-
+background-image: url("vector.jpg");
+background-size: 1350px 800px;
+background-repeat: no-repeat;
 }
 
 a {
@@ -78,10 +79,14 @@ th, td {
 </style>
 </head>
 <body>
-<center><a href="index.php" target="_self">HOME<a/>
-<center><a href="infomation.php" target="_self">Info<a/>
-<center><a href="knowmoreaboutme.php" target=_self">More Info<a/>
-<p><center><h1> WELCOME TO MY HOME PAGE</p></h1>
+<center><FORM METHOD="LINK" ACTION="infomation.php">
+<INPUT TYPE="submit" VALUE="Informations">
+</FORM> 
+<center><FORM METHOD="LINK" ACTION="knowmoreaboutme.php">
+<INPUT TYPE="submit" VALUE="More Informations about me!">
+</FORM> 
+
+<p><center><h1> WELCOME TO MY Website</p></h1>
 <img src="200_s.gif" style="widtg:420px;height 250px">
 
 <?php
@@ -169,7 +174,9 @@ function delete_id(id)
     <table align="center">
     <tr>
 	
-    <th colspan="8"><center><a href="add_data.php">Add data here.</a></th>
+	<center colspan= "20"><FORM METHOD="LINK" ACTION="add_data.php">
+<INPUT TYPE="submit" VALUE="Add data here">
+</FORM> 
     
 	</tr>
    <th><u>Fullname</u></th>
@@ -192,8 +199,8 @@ function delete_id(id)
         <td><?php echo $row[2]; ?></td>
         <td><?php echo $row[3]; ?></td>
 		<td><?php echo $row[4]; ?></td>
-		<td><?php echo $row[5]; ?></td>
-		<td><?php echo $row[6]; ?></td>
+        <td><?php echo $row[5]; ?></td>
+        <td><?php echo $row[6]; ?></td>
 		
   <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
