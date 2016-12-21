@@ -13,7 +13,6 @@ public function index(){
 	
 }
 
-
 public function add_form()
 {
 $this->load->view('Users_add');
