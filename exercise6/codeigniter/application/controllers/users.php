@@ -24,7 +24,7 @@ $this->load->view('info');
 }
 public function more()
 {
-
+$this->load->view('more');
 }
 
 
