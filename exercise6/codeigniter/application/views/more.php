@@ -18,6 +18,51 @@ function myFunction() {
     document.getElementById("demo").innerHTML = "I love burgers.";
 	}
 </script>
+<style>
+
+.error {color: #414040;}
+
+h1 {
+	font-size: 30px;
+	}
+
+p.serif {
+	font-family: "Cursive", Times, seif;
+	}
+	
+p {
+	font-size: 20px;
+	color: red;
+	}
+	
+div {
+    border: 5px solid black;
+    background-color: #F2F3F4;
+    padding-top: 10px;
+
+}
+
+body {
+background-image: url("http://localhost/exercise6/codeigniter/pics/download.jpg")
+
+}
+
+a {
+	color: black;
+	}
+	
+table {
+
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 3px solid #000000;
+	font-size: 20px;
+}
+</style>
 </head>
 <body>
 </body>
