@@ -75,5 +75,22 @@ th, td {
 <center><FORM METHOD="LINK" ACTION="<?php echo base_url();?>index.php/users/">
 <INPUT TYPE="submit" VALUE="Back to main page">
 </FORM>
+
+<table>
+  <tr>
+    <th>My full name?</th>
+    <th>Where do I live?</th>
+    <th>My age?</th>
+	<th>Interests</th>
+	<th>My most favorite food?</th>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="myFunction()">Click</button></td>
+    <td><button type="button" onclick="myFunction2()">Click</button></td>
+	<td><button type="button" onclick="myFunction3()">Click</button></td>
+    <td><button type="button" onclick="myFunction4()">Click</button></td>
+	<td><button type="button" onclick="myFunction5()">Click</button></td>
+  </tr>
+</table>
 </body>
 </html>
