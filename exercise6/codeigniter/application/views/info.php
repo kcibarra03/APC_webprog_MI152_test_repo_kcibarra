@@ -67,5 +67,30 @@ th, td {
 </style>
 </head>
 <body>
+<h1>WEBPROG</h1>
+<p> My Home Page.</p>
+
+<center><FORM METHOD="LINK" ACTION="<?php echo base_url();?>index.php/users/more">
+<INPUT TYPE="submit" VALUE="More Informations about me!">
+</FORM>
+<center><FORM METHOD="LINK" ACTION="<?php echo base_url();?>index.php/users/">
+<INPUT TYPE="submit" VALUE="Home">
+</FORM>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Nickname</th>
+    <th>Interest</th>
+	<th>Favorite Website</th>
+  </tr>
+  <tr>
+    <td>Kim C. Ibarra</td>
+    <td>Kim/Harvey</td>
+	<td><img src="http://localhost/exercise6/codeigniter/pics/download (1).jpg" alt="basketball" style="width:150px;height:100px;"></td>
+    <td><p><b><a href="www.NBA.com" target="_blank">NBA</a></b></p></td>
+	<td><p><b><a href="www.IGN.com" target="_blank">IGN</a></b></p></td>
+  </tr>
+</table>
 </body>
 </html>
