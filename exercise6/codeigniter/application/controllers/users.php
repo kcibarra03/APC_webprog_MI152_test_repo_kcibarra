@@ -17,10 +17,12 @@ public function add_form()
 {
 $this->load->view('Users_add');
 }
+
 public function info()
 {
 $this->load->view('info');
 }
+
 public function more()
 {
 $this->load->view('more');
@@ -39,11 +41,13 @@ if($res){
 header('location:'.base_url()."index.php/users/");
 }
 }
+
 public function Users_edit(){
 $user_id = $this->uri->segment(3);
  $data['users'] = $this->users_model->getById($user_id);
 $this->load->view('Users_edit', $data);
 }
+
 public function update()
 {
 $mdata['name']=$_POST['name'];
