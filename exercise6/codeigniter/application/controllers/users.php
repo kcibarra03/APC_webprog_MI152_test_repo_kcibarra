@@ -22,6 +22,10 @@ public function info()
 {
 
 }
+public function more()
+{
+
+}
 
 
 public function insert_users_db()
