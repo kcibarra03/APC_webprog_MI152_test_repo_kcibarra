@@ -20,7 +20,7 @@ $this->load->view('Users_add');
 }
 public function info()
 {
-
+$this->load->view('info');
 }
 public function more()
 {
