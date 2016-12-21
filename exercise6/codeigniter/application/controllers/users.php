@@ -27,7 +27,6 @@ public function more()
 $this->load->view('more');
 }
 
-
 public function insert_users_db()
 {
 $udata['name'] = $this->input->post('name');
