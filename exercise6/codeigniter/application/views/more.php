@@ -65,5 +65,15 @@ th, td {
 </style>
 </head>
 <body>
+
+<h1>Want to know more about me?</h1>
+<h2> Click the buttons below<h2>
+<p id="demo"></p>
+<center><FORM METHOD="LINK" ACTION="<?php echo base_url();?>index.php/users/info">
+<INPUT TYPE="submit" VALUE="More Informations about me!">
+</FORM>
+<center><FORM METHOD="LINK" ACTION="<?php echo base_url();?>index.php/users/">
+<INPUT TYPE="submit" VALUE="Back to main page">
+</FORM>
 </body>
 </html>
