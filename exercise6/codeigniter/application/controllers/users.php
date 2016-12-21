@@ -57,6 +57,7 @@ if($res){
 header('location:'.base_url()."index.php/users/");
 }
 }
+
 public function delete($user_id)
 {
 $this->users_model->delete_a_user($user_id);
