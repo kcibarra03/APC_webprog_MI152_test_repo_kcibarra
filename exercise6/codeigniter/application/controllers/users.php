@@ -18,6 +18,10 @@ public function add_form()
 {
 $this->load->view('Users_add');
 }
+public function info()
+{
+
+}
 
 
 public function insert_users_db()
