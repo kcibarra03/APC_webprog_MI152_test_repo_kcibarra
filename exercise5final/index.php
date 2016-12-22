@@ -157,7 +157,7 @@ function edt_id(id)
 }
 function delete_id(id)
 {
- if(confirm('are you sure you want to delete?'))
+ if(confirm('are you sure you want to delete this data?'))
  {
   window.location.href='index.php?delete_id='+id;
  }
@@ -178,7 +178,7 @@ function delete_id(id)
    
 	
 	<center colspan= "20"><FORM METHOD="LINK" ACTION="add_data.php">
-<INPUT TYPE="submit" VALUE="Add data here">
+<INPUT TYPE="Add" VALUE="Kindly enter your data here">
 </FORM> 
     
 	</tr>
