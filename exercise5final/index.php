@@ -150,7 +150,7 @@ function test_input($data) {
 <script type="text/javascript">
 function edt_id(id)
 {
- if(confirm('Sure to edit ?'))
+ if(confirm('are you really sure you want to edit ?'))
  {
   window.location.href='edit_data.php?edit_id='+id;
  }
