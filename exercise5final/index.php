@@ -172,7 +172,7 @@ function delete_id(id)
 
 
 
-    <table align="center">
+    <table align="center">	
     <tr>
 	
    
